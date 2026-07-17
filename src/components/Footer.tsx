@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-12">
           <div className="flex flex-col">
             <span className="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-1">Location</span>
-            <span className="text-sm font-semibold text-white">Mumbai, Maharashtra</span>
+            <span className="text-sm font-semibold text-white">Mumbai, Maharashtra.</span>
           </div>
           <div className="flex flex-col">
             <span className="text-[10px] text-gray-500 font-bold uppercase tracking-widest mb-1">WhatsApp</span>
