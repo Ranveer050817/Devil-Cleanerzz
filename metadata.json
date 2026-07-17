@@ -1,0 +1,6 @@
+{
+  "name": "Devil Cleanerz",
+  "description": "Professional cleaning company website with a premium red and black theme.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
