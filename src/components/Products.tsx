@@ -41,29 +41,30 @@ export default function Products() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {products.map((product, index) => (
-            <motion.a
-              href={`https://wa.me/917208901545?text=${encodeURIComponent(`Hi, I am interested in purchasing the ${product.name}. Please provide more details.`)}`}
-              target="_blank"
-              rel="noopener noreferrer"
+            <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ delay: (index % 4) * 0.1 }}
-              className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl overflow-hidden group hover:border-red-600/50 transition-colors block cursor-pointer"
+              className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl overflow-hidden group hover:border-red-600/50 transition-all flex flex-col h-full hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(220,38,38,0.15)]"
             >
-              <div className="aspect-[3/5] bg-black/40 relative overflow-hidden flex items-center justify-center">
-                <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div>
-                <div className="absolute inset-0 bg-red-600/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-sm">
-                  <ShoppingBag className="w-10 h-10 text-red-600 scale-0 group-hover:scale-100 transition-transform duration-300 drop-shadow-[0_0_10px_rgba(220,38,38,0.8)]" />
-                </div>
+              <div className="aspect-square bg-black/20 relative overflow-hidden flex items-center justify-center p-6">
+                <img src={product.image} alt={product.name} className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
               </div>
-              <div className="p-6">
-                <h3 className="font-bold text-lg mb-2 uppercase tracking-wide group-hover:text-red-600 transition-colors">{product.name}</h3>
-                <p className="text-sm text-gray-400 font-medium">{product.desc}</p>
+              <div className="p-6 flex flex-col flex-grow text-center">
+                <h3 className="font-bold text-lg uppercase tracking-wide group-hover:text-red-500 transition-colors mb-6 flex-grow flex items-center justify-center text-white">{product.name}</h3>
+                
+                <a
+                  href={`https://wa.me/917208901545?text=${encodeURIComponent(`Hello, I want to order: ${product.name}`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full block py-3.5 rounded-xl font-bold text-sm uppercase tracking-widest transition-all bg-red-600 text-white hover:bg-red-500 shadow-[0_4px_15px_rgba(220,38,38,0.3)] hover:shadow-[0_6px_20px_rgba(220,38,38,0.4)] flex items-center justify-center gap-2"
+                >
+                  <ShoppingBag className="w-4 h-4" />
+                  Order Now
+                </a>
               </div>
-            </motion.a>
+            </motion.div>
           ))}
         </div>
       </div>

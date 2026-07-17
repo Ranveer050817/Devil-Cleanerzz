@@ -30,7 +30,9 @@ export default function Footer() {
         <div className="flex flex-col items-start md:items-end gap-4">
           <div className="flex gap-4 items-center">
             <a 
-              href="#" 
+              href="https://www.instagram.com/devil_cleanerz?igsh=MXhjemYxa3Fld2lnMg=="
+              target="_blank"
+              rel="noopener noreferrer"
               className="w-10 h-10 rounded-full border border-white/20 flex items-center justify-center opacity-60 hover:opacity-100 hover:border-red-500 hover:text-red-500 transition-all cursor-pointer text-white"
               aria-label="Instagram"
             >

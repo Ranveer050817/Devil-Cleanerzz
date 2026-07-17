@@ -1,6 +1,4 @@
-import { useState } from 'react';
-import { motion, AnimatePresence } from 'motion/react';
-import { ChevronDown } from 'lucide-react';
+import { motion } from 'motion/react';
 
 const serviceCategories = [
   {
@@ -61,14 +59,20 @@ const serviceCategories = [
 ];
 
 export default function Services() {
-  const [openIndex, setOpenIndex] = useState<number | null>(0);
-
   return (
     <section id="services" className="py-24 relative">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-10">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-black tracking-tighter uppercase mb-4">Complete Deep <span className="text-red-600 text-glow">Cleaning</span></h2>
-          <p className="text-gray-400 max-w-2xl mx-auto">Everything included in our comprehensive cleaning service.</p>
+          <p className="text-gray-400 max-w-2xl mx-auto mb-3">Everything included in our comprehensive cleaning service.</p>
+          <motion.p
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-sm md:text-base text-gray-300 font-medium max-w-2xl mx-auto tracking-wide"
+          >
+            ✨ No one gives you <span className="text-red-500 font-semibold">this many services</span> at such an <span className="text-red-500 font-semibold">amazing price</span>.
+          </motion.p>
         </div>
 
         <div className="space-y-4">
@@ -76,42 +80,25 @@ export default function Services() {
             <motion.div 
               key={index}
               initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
+              
               transition={{ delay: index * 0.1 }}
               className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-2xl overflow-hidden"
             >
-              <button
-                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                className="w-full px-8 py-6 flex items-center justify-between text-left focus:outline-none hover:bg-white/[0.02] transition-colors"
-              >
+              <div className="w-full px-8 py-6 flex items-center text-left bg-white/[0.02]">
                 <span className="text-lg md:text-xl font-bold tracking-widest uppercase">{category.title}</span>
-                <ChevronDown 
-                  className={`w-6 h-6 text-red-600 transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}
-                />
-              </button>
+              </div>
               
-              <AnimatePresence>
-                {openIndex === index && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <div className="px-8 pb-8 border-t border-white/5 pt-6 bg-black/20">
-                      <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {category.items.map((item, i) => (
-                          <li key={i} className="flex items-start gap-3 text-gray-400 font-medium">
-                            <div className="w-1.5 h-1.5 rounded-full bg-red-600 mt-2 flex-shrink-0"></div>
-                            <span className="text-sm md:text-base leading-snug">{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </motion.div>
-                )}
-              </AnimatePresence>
+              <div className="px-8 pb-8 border-t border-white/5 pt-6 bg-black/20">
+                <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {category.items.map((item, i) => (
+                    <li key={i} className="flex items-start gap-3 text-gray-400 font-medium">
+                      <div className="w-1.5 h-1.5 rounded-full bg-red-600 mt-2 flex-shrink-0"></div>
+                      <span className="text-sm md:text-base leading-snug">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </motion.div>
           ))}
         </div>

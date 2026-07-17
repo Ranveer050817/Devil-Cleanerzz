@@ -24,8 +24,8 @@ export default function WhyChooseUs() {
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, y: 0 }}
+              
               transition={{ delay: index * 0.1, duration: 0.5 }}
               className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 rounded-3xl group hover:-translate-y-2 transition-all duration-300 hover:border-red-600/50 hover:shadow-[0_0_30px_rgba(220,38,38,0.15)]"
             >

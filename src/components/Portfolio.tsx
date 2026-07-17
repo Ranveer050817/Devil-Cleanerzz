@@ -5,7 +5,7 @@ import hotelImg from '../assets/dchotel.jpg';
 import warehouseImg from '../assets/dcwarehouse.jpg';
 import restaurantImg from '../assets/dcresraunt.jpg';
 import resortImg from '../assets/dcresort.jpg';
-import bungalowVillaImg from '../assets/dcbunglow_villa.jpg';
+import bungalowVillaImg from '../assets/dcbunglow&villa.jpg';
 
 const projects = [
   { id: 1, name: 'Office Deep Cleaning', image: officeImg },
@@ -27,8 +27,8 @@ export default function Portfolio() {
         <div className="text-center mb-16">
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            animate={{ opacity: 1, y: 0 }}
+            
             transition={{ duration: 0.6 }}
             className="text-3xl md:text-5xl font-black tracking-tighter uppercase mb-4"
           >
@@ -36,8 +36,8 @@ export default function Portfolio() {
           </motion.h2>
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
+            animate={{ opacity: 1, y: 0 }}
+            
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-gray-400 max-w-2xl mx-auto"
           >
@@ -50,8 +50,8 @@ export default function Portfolio() {
             <motion.div
               key={project.id}
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
+              animate={{ opacity: 1, y: 0 }}
+              
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group relative rounded-[18px] overflow-hidden bg-white/5 border border-white/10 hover:border-red-500/50 hover:shadow-[0_0_30px_rgba(220,38,38,0.3)] transition-all duration-500"
             >

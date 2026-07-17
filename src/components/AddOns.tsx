@@ -23,8 +23,8 @@ export default function AddOns() {
             <motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
+              animate={{ opacity: 1, scale: 1 }}
+              
               transition={{ delay: index * 0.1 }}
               className="bg-white/5 backdrop-blur-lg border border-white/10 p-6 rounded-3xl flex flex-col items-center justify-center text-center group hover:bg-red-600/10 hover:border-red-600/30 transition-all cursor-pointer"
             >

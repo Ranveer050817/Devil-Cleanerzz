@@ -2,7 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { motion, useMotionValue, useTransform } from 'motion/react';
 import { MoveHorizontal } from 'lucide-react';
 import kitchenB from '../assets/kitchenB.jpg';
-import kitchenA from '../assets/kitchenA.jpg';
+import kitchenA from '../assets/kitchenA,jpg.jpg';
 import beforeImg from '../assets/before.jpg';
 import afterImg from '../assets/after.jpg';
 

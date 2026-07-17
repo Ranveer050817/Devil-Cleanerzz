@@ -47,8 +47,8 @@ export default function Booking() {
 
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          animate={{ opacity: 1, y: 0 }}
+          
           className="bg-white/5 backdrop-blur-lg border border-white/10 p-8 md:p-12 rounded-3xl relative"
         >
           <form onSubmit={handleBooking} className="space-y-6">
