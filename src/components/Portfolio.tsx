@@ -5,7 +5,7 @@ import hotelImg from '../assets/dchotel.jpg';
 import warehouseImg from '../assets/dcwarehouse.jpg';
 import restaurantImg from '../assets/dcresraunt.jpg';
 import resortImg from '../assets/dcresort.jpg';
-import bungalowVillaImg from '../assets/dcbunglow&villa.jpg';
+import bungalowVillaImg from '../assets/dcbunglow_villa.jpg';
 
 const projects = [
   { id: 1, name: 'Office Deep Cleaning', image: officeImg },
