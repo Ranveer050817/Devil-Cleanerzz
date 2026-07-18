@@ -56,12 +56,12 @@ export default function Portfolio() {
               className="group relative rounded-[18px] overflow-hidden bg-white/5 border border-white/10 hover:border-red-500/50 hover:shadow-[0_0_30px_rgba(220,38,38,0.3)] transition-all duration-500"
             >
               <div className="aspect-video w-full overflow-hidden">
-                <img
+                {project.image ? <img
                   src={project.image}
                   alt={project.name}
                   loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+                /> : null}
               </div>
               
               {/* Premium red and black gradient overlay */}

@@ -49,7 +49,7 @@ export default function Products() {
               className="bg-white/5 backdrop-blur-lg border border-white/10 rounded-3xl overflow-hidden group hover:border-red-600/50 transition-all flex flex-col h-full hover:-translate-y-1 hover:shadow-[0_0_20px_rgba(220,38,38,0.15)]"
             >
               <div className="aspect-square bg-black/20 relative overflow-hidden flex items-center justify-center p-6">
-                <img src={product.image} alt={product.name} className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" />
+                {product.image ? <img src={product.image} alt={product.name} className="w-full h-full object-contain transition-transform duration-500 group-hover:scale-105" /> : null}
               </div>
               <div className="p-6 flex flex-col flex-grow text-center">
                 <h3 className="font-bold text-lg uppercase tracking-wide group-hover:text-red-500 transition-colors mb-6 flex-grow flex items-center justify-center text-white">{product.name}</h3>

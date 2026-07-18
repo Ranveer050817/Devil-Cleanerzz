@@ -48,7 +48,7 @@ function ComparisonSlider({ beforeImage, afterImage, title }: { beforeImage: str
       >
         {/* After Image (Background) */}
         <div className="absolute inset-0">
-          <img src={afterImage} alt="After Cleaning" className="w-full h-full object-cover" />
+          {afterImage ? <img src={afterImage} alt="After Cleaning" className="w-full h-full object-cover" /> : null}
         </div>
 
         {/* Before Image (Foreground, clipped) */}
@@ -56,7 +56,7 @@ function ComparisonSlider({ beforeImage, afterImage, title }: { beforeImage: str
           className="absolute inset-0"
           style={{ clipPath: clipPathStyle }}
         >
-          <img src={beforeImage} alt="Before Cleaning" className="w-full h-full object-cover" />
+          {beforeImage ? <img src={beforeImage} alt="Before Cleaning" className="w-full h-full object-cover" /> : null}
         </motion.div>
 
         {/* Labels */}

@@ -31,12 +31,12 @@ export default function Packages() {
                 className="bg-[#0f0f0f]/90 backdrop-blur-xl border border-white/10 rounded-[24px] p-4 transition-all duration-500 hover:-translate-y-2 hover:border-red-600/50 hover:shadow-[0_0_30px_rgba(220,38,38,0.15)] flex flex-col items-center text-center group"
               >
                 <div className="w-full mb-6 overflow-hidden rounded-xl flex items-center justify-center bg-black/20">
-                  <img 
+                  {pkg.image ? <img 
                     src={pkg.image} 
                     alt={pkg.name} 
                     loading="lazy"
                     className="w-full h-auto object-contain transform group-hover:scale-105 transition-transform duration-700 ease-out" 
-                  />
+                  /> : null}
                 </div>
                 
                 <h3 className="text-lg md:text-xl font-bold text-white mb-6 mt-auto">{pkg.name}</h3>

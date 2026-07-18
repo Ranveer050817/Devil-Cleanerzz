@@ -31,7 +31,7 @@ export default function Navbar() {
           <div className="flex flex-row items-center justify-between h-12 md:h-16 gap-2 md:gap-0">
             <div className="flex-shrink-0 flex items-center">
               <a href="index.html" className="flex items-center gap-1.5 md:gap-3 relative z-50">
-                <img src={devilLogo} alt="Devil Cleanerz" className="w-[36px] h-[32px] md:w-[78px] md:h-[69px] object-cover rounded shadow-[0_0_20px_rgba(220,38,38,0.4)]" />
+                {devilLogo ? <img src={devilLogo} alt="Devil Cleanerz" className="w-[36px] h-[32px] md:w-[78px] md:h-[69px] object-cover rounded shadow-[0_0_20px_rgba(220,38,38,0.4)]" /> : null}
                 <span className="text-xs sm:text-base md:text-xl font-bold tracking-tight uppercase text-white">
                   Devil <span className="text-red-600 hidden sm:inline">CLEANERZ & ENTERPRISES</span>
                 </span>
